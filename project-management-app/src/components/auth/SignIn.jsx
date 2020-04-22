@@ -1,14 +1,20 @@
 import React, { Component } from "react";
 
 class SignIn extends Component {
-  state = {};
+  state = {
+    email: "",
+    password: "",
+  };
 
   handleChange = (e) => {
-    console.log(e);
+    this.setState({
+      [e.target.id]: e.target.value,
+    });
   };
 
   handleSubmit = (e) => {
-    console.log(e);
+    e.preventDefault();
+    console.log(this.state);
   };
 
   render() {
@@ -17,7 +23,7 @@ class SignIn extends Component {
         <br />
         <div className="row">
           <div className="col m6 offset-m3">
-            <form onSubmit={this.onSubmit} className="white">
+            <form onSubmit={this.handleSubmit} className="white">
               <h5 className="grey-text text-darken-2">Sign In</h5>
               <div className="input-field">
                 <label htmlFor="email">Email</label>
