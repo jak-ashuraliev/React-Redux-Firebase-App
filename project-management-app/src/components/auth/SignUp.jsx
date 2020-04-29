@@ -25,7 +25,11 @@ class SignUp extends Component {
         <br />
         <div className="row">
           <div className="col m6 offset-m3">
-            <form onSubmit={this.handleSubmit} className="white">
+            <form
+              onSubmit={this.handleSubmit}
+              className="white"
+              autoComplete="off"
+            >
               <h5 className="grey-text text-darken-2">Sign Up</h5>
               <div className="input-field">
                 <label htmlFor="firstName">First Name</label>
